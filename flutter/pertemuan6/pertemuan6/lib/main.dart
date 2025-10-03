@@ -11,22 +11,23 @@ class AlyaApp extends StatelessWidget {
       title: "AlyaApp",
       home: Scaffold(
         appBar: AppBar(
-          title: Text("Belajar Scaffold & AppBar"),
-          backgroundColor: Colors.teal,
-          leading: const Icon(Icons.menu),
-          actions: const [
-            Icon(Icons.search),
-            Icon(Icons.settings),
-            // Icon(Icons.more_vert),
-          ],
-        ),
-        body: Row(
-          mainAxisAlignment: MainAxisAlignment.spaceAround,
-          children: const [
-            Icon(Icons.home, size: 40),
-            Icon(Icons.star, size: 40),
-            Icon(Icons.settings, size: 40),
-          ],
+          title: Text("Column & Row Example")),
+        body: Center(
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              const Text("Atas"),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: const [
+                  Icon(Icons.star, color: Colors.red, size: 40),
+                  Icon(Icons.star, color: Colors.green, size: 40),
+                  Icon(Icons.star, color: Colors.blue, size: 40),
+                ],
+              ),
+              const Text("Bawah"),
+            ],
+          ),
         ),
         drawer: Drawer(
           child: ListView(
