@@ -20,13 +20,12 @@ class AlyaApp extends StatelessWidget {
             // Icon(Icons.more_vert),
           ],
         ),
-        body: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          crossAxisAlignment: CrossAxisAlignment.start,
+        body: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceAround,
           children: const [
-            Text("Baris 1"),
-            Text("Baris 2"),
-            Text("Barsi 3"),
+            Icon(Icons.home, size: 40),
+            Icon(Icons.star, size: 40),
+            Icon(Icons.settings, size: 40),
           ],
         ),
         drawer: Drawer(
