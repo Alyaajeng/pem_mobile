@@ -34,6 +34,15 @@ class AlyaApp extends StatelessWidget {
                   style: TextStyle(color: Colors.white),
                 ),
               ),
+              Container(
+                width: 150,
+                height: 150,
+                decoration: BoxDecoration(
+                  color: Colors.teal,
+                  borderRadius: BorderRadius.circular(20),
+                  border: Border.all(color: Colors.black, width: 3),
+                ),
+              ),
             ],
           ),
         ),
