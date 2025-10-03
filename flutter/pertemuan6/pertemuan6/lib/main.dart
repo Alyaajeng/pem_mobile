@@ -20,10 +20,14 @@ class AlyaApp extends StatelessWidget {
             // Icon(Icons.more_vert),
           ],
         ),
-        body: const Center(child: Text("Hello, Alya Cantik")),
-        floatingActionButton: FloatingActionButton(
-          onPressed: () {},
-          child: Icon(Icons.add),
+        body: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: const [
+            Text("Baris 1"),
+            Text("Baris 2"),
+            Text("Barsi 3"),
+          ],
         ),
         drawer: Drawer(
           child: ListView(
