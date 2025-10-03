@@ -12,38 +12,22 @@ class AlyaApp extends StatelessWidget {
       home: Scaffold(
         appBar: AppBar(title: Text("Column & Row Example")),
         body: Center(
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              const Text("Atas"),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: const [
-                  Icon(Icons.star, color: Colors.red, size: 40),
-                  Icon(Icons.star, color: Colors.green, size: 40),
-                  Icon(Icons.star, color: Colors.blue, size: 40),
-                ],
+          child: Container(
+            width: 200,
+            height: 100,
+            decoration: const BoxDecoration(
+              gradient: LinearGradient(
+                colors: [Colors.purple, Colors.pink],
+                begin: Alignment.topLeft,
+                end: Alignment.bottomRight,
               ),
-              const Text("Bawah"),
-              Container(
-                margin: const EdgeInsets.all(20), // jarak luar
-                padding: const EdgeInsets.all(10), // jarak dalam
-                color: Colors.blue,
-                child: const Text(
-                  "Dengan Margin & Padding",
-                  style: TextStyle(color: Colors.white),
-                ),
+            ),
+            child: const Center(
+              child: Text(
+                "Gradient Container",
+                style: TextStyle(color: Colors.white),
               ),
-              Container(
-                width: 150,
-                height: 150,
-                decoration: BoxDecoration(
-                  color: Colors.teal,
-                  borderRadius: BorderRadius.circular(20),
-                  border: Border.all(color: Colors.black, width: 3),
-                ),
-              ),
-            ],
+            ),
           ),
         ),
         drawer: Drawer(
