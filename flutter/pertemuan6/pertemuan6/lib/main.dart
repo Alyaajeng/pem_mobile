@@ -15,19 +15,9 @@ class AlyaApp extends StatelessWidget {
           child: Container(
             width: 200,
             height: 100,
-            decoration: const BoxDecoration(
-              gradient: LinearGradient(
-                colors: [Colors.purple, Colors.pink],
-                begin: Alignment.topLeft,
-                end: Alignment.bottomRight,
-              ),
-            ),
-            child: const Center(
-              child: Text(
-                "Gradient Container",
-                style: TextStyle(color: Colors.white),
-              ),
-            ),
+            color: Colors.orange,
+            alignment: Alignment.bottomRight,
+            child: const Text("Sudut kanan bawah"),
           ),
         ),
         drawer: Drawer(
