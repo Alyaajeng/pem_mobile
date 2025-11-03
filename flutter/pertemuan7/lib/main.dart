@@ -1,25 +1,32 @@
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp(SingleChildExample());
+  runApp(ColumnExample());
 }
 
-class SingleChildExample extends StatelessWidget {
-  const SingleChildExample({super.key});
-
+class ColumnExample extends StatelessWidget {
+  const ColumnExample({super.key});
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
         appBar: AppBar(
-          title: Text('Single Child Example'),
-          backgroundColor: Colors.blue,
+          title: Text('Contoh Column'),
         ),
-        body: Center(
-          child: Text(
-            'Hello, Flutter!',
-            style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
-          ),
+        body: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Text(
+              'ini baris pertama',
+            ),
+            Text(
+              'ini baris kedua',
+            ),
+           ElevatedButton(
+              onPressed: () {},
+              child: Text('Tombol'),
+            ),
+          ],
         ),
       ),
     );
