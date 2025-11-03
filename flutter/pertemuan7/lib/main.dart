@@ -1,36 +1,31 @@
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp(StackExample());
+  runApp(ProfileLayout());
 }
 
-class StackExample extends StatelessWidget {
-  const StackExample({super.key}); // Tambahkan konstruktor dengan super.key
-
+class ProfileLayout extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      home: Scaffold(
+    return Scaffold(
         appBar: AppBar(
-          title: Text('Contoh ListView'),
+          title: Text('Layout Profil'),
         ),
-        body: ListView(
-          children: [
-            ListTile(
-              title: Text('Item 1'),
-              leading: Icon(Icons.star),
-            ),
-            ListTile(
-              title: Text('Item 2'),
-              leading: Icon(Icons.favorite),
-            ),
-            ListTile(
-              title: Text('Item 3'),
-              leading: Icon(Icons.home),
-            ),
-          ],
-        ),
-      ),
+       body: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          CircleAvatar(
+            radius: 50, backgroundImage: AssetImage('assets/images/avatar.png'),
+          ),
+          SizedBox(height: 10),
+          Text(
+            'Alya Ajeng Ayu',
+            style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+          ),
+          SizedBox(height: 5),
+          Text('Flutter Developer', style: TextStyle(color: Colors.grey[600])),
+        ],
+       ),
     );
   }
 }
