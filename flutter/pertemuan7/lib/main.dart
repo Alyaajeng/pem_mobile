@@ -1,12 +1,16 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 
-void main() {
-  runApp(MaterialApp(
-    initialRoute: '/',
-    routes: {
-      '/': (context) => HomePage(),
-      '/second': (context) => SecondPage(),
-    },
+void main(){
+  final router = GoRouter(
+    routes: [
+      GoRoute(path: '/', builder: (context, state) => HomePage()),
+      GoRoute(path: '/about', builder: (context, state) => AboutPage()),
+    ],
+  );
+  runApp(
+    MaterialApp.router(
+      routerConfig: router,
   ));
 }
 
@@ -16,12 +20,12 @@ class HomePage extends StatelessWidget {
     return MaterialApp(
       home: Scaffold(
         appBar: AppBar(
-          title: Text('Named Route Example'),
+          title: Text('Router Example'),
         ),
         body: Center(
           child: ElevatedButton(
-            onPressed: () => Navigator.pushNamed(context, '/second'),
-            child: Text('Ke Halaman Kedua'),  
+            onPressed: () => context.go('/about'),
+            child: Text('Ke Halaman About'),  
           )
         ),
       ),
@@ -29,12 +33,12 @@ class HomePage extends StatelessWidget {
   }
 }
 
-class SecondPage extends StatelessWidget {
+class AboutPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Halaman Kedua'),
+        title: Text('Halaman Profil'),
       ),
       body: Center(
         child: ElevatedButton(
