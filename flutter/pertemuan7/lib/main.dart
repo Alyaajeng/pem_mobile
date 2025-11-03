@@ -12,28 +12,23 @@ class StackExample extends StatelessWidget {
     return MaterialApp(
       home: Scaffold(
         appBar: AppBar(
-          title: Text('Contoh Stack'),
+          title: Text('Contoh ListView'),
         ),
-        body: Center(
-          child: Stack(
-            alignment: Alignment.center,
-            children: [
-              Container(
-                width: 200,
-                height: 200,
-                color: Colors.blue[100],
-              ),
-              Container(
-                width: 150,
-                height: 150,
-                color: Colors.blue[300],
-              ),
-              Text(
-                'Tumpuk!',
-                style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
-             )
-            ],
-          ),
+        body: ListView(
+          children: [
+            ListTile(
+              title: Text('Item 1'),
+              leading: Icon(Icons.star),
+            ),
+            ListTile(
+              title: Text('Item 2'),
+              leading: Icon(Icons.favorite),
+            ),
+            ListTile(
+              title: Text('Item 3'),
+              leading: Icon(Icons.home),
+            ),
+          ],
         ),
       ),
     );
