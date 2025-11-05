@@ -35,6 +35,16 @@ dependencies:
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^1.0.8
   camera: ^0.11.3
+  material_design: ^0.28.1
+
+  # SAVE PHOTO / ACCESS FILE SYSTEM
+  path_provider: ^2.1.4
+
+  # PERMISSION FOR CAMERA & STORAGE
+  permission_handler: ^11.3.0
+
+  # OPTIONAL (IF WANT PICK IMAGE FROM GALLERY LATER)
+  image_picker: ^1.1.2
 
 dev_dependencies:
   flutter_test:
