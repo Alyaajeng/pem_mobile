@@ -16,7 +16,7 @@ class MyApp extends StatelessWidget {
       title: 'Camera App',
       theme: ThemeData(useMaterial3: true, colorSchemeSeed: Colors.blue),
       home: const HomePage(),
-    );
+    );  
   }
 }
 
